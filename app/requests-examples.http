@@ -1,0 +1,90 @@
+# примеры API-запросов
+
+@baseUrl = http://89.108.78.201:9090
+# создание пользователя
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "name": "UNIX",
+  "e-mail": "ux@mail.ru",
+  "password" : "kuku",
+  "confirm-password": "kuku"
+}
+
+###
+
+# получение пользователей
+GET {{baseUrl}}/users/
+Content-Type: application/json
+
+###
+
+# обновление пользователя
+PATCH {{baseUrl}}/users/48
+Content-Type: application/json
+
+{
+  "name": "Gest7",
+  "e-mail": "Gest7@mail.ru",
+  "password" : "kus",
+  "new_password" : "kuku"
+}
+
+###
+# удаление пользователя
+DELETE {{baseUrl}}/users/48
+Content-Type: application/json
+
+{
+  "password" : "kuku"
+}
+
+
+
+###
+# создание объявления
+POST {{baseUrl}}/note/
+Content-Type: application/json
+
+{
+  "owner": "Yun",
+  "e-mail": "yun@mail.ru",
+  "password": "kuku",
+  "title": "Fresh eat",
+  "description": "Freah fish" 
+}
+
+
+###
+# обновление объявления
+PATCH {{baseUrl}}/note/5
+Content-Type: application/json
+
+{
+  "owner": "Yun",
+  "e-mail": "yun@mail.ru",
+  "password": "kuku",
+  "title": "sell sugar in big box",
+  "description": "low COST of Sugar" 
+}
+
+
+###
+# удаление объявления
+DELETE {{baseUrl}}/note/4
+Content-Type: application/json
+
+{
+  "owner": "Yun",
+  "e-mail": "yun@mail.ru",
+  "password": "kuku"
+}
+
+
+###
+# получение объявлений
+GET {{baseUrl}}/note/
+Content-Type: application/json
+
+###
